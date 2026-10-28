@@ -1,21 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Travel and Tour Management Platform</title>
-<link rel="stylesheet" href="css/style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Waypoint — Plan smarter trips</title>
+<link rel="stylesheet" href="home.css">
 </head>
 <body>
 
-<div id="root"></div>
+  <header class="nav">
+    <a href="index.html" class="brand">Waypoint</a>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="itinerary.html">Plan a Trip</a></li>
+        <li><a href="login.html" class="btn-nav">Log in</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<!-- React (development builds, loaded via CDN as per project scope - no backend/build server) -->
-<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">No spreadsheets. No fifteen open tabs.</p>
+      <h1>One route, sequenced for you — start to finish.</h1>
+      <p class="lede">Pick a destination, your dates and a budget. Waypoint lays out
+      a day-by-day plan that keeps travel time down and spending on track.</p>
+      <div class="hero-actions">
+        <a href="itinerary.html" class="btn-primary">Build my itinerary</a>
+        <a href="destinations.html" class="btn-secondary">Browse destinations</a>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <div class="route-card">
+        <p class="route-day">Day 2 · Jaipur</p>
+        <ul>
+          <li><span>09:00</span> Amber Fort</li>
+          <li><span>12:30</span> City Palace</li>
+          <li><span>16:00</span> Nahargarh Fort</li>
+        </ul>
+        <p class="route-note">Reordered to save 46 minutes of travel</p>
+      </div>
+    </div>
+  </section>
 
-<script type="text/babel" src="js/app.js"></script>
+  <section class="features">
+    <div class="feature">
+      <span class="feature-index">Route</span>
+      <h3>Sequenced, not scattered</h3>
+      <p>Stops for each day are ordered to cut backtracking, not just listed in the order you picked them.</p>
+    </div>
+    <div class="feature">
+      <span class="feature-index">Budget</span>
+      <h3>Built around your ceiling</h3>
+      <p>Set a total budget once — the plan is assembled to fit inside it, not priced after the fact.</p>
+    </div>
+    <div class="feature">
+      <span class="feature-index">Saved</span>
+      <h3>Comes back when you do</h3>
+      <p>Your itineraries, wishlist and bookings are kept on this device, ready the next time you open the app.</p>
+    </div>
+  </section>
+
+  <section class="preview">
+    <div class="preview-head">
+      <h2>Where people are heading</h2>
+      <a href="destinations.html">See all destinations →</a>
+    </div>
+    <div class="preview-grid">
+      <article class="dest-card dest-1">
+        <div class="dest-art"></div>
+        <h4>Jaipur</h4>
+        <p>4–6 days · Heritage &amp; forts</p>
+      </article>
+      <article class="dest-card dest-2">
+        <div class="dest-art"></div>
+        <h4>Manali</h4>
+        <p>3–5 days · Mountains &amp; treks</p>
+      </article>
+      <article class="dest-card dest-3">
+        <div class="dest-art"></div>
+        <h4>Goa</h4>
+        <p>3–4 days · Coast &amp; nightlife</p>
+      </article>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>Waypoint — a student project, GLA University.</p>
+    <p>Om Singh · Nishant Prajapati · Palak Kamra · Naveen Yadav</p>
+  </footer>
 
 </body>
 </html>
