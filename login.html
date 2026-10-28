@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Log in — Waypoint</title>
 <link rel="stylesheet" href="auth-booking.css">
-<link rel="stylesheet" href="extra.css">
 </head>
 <body>
 
@@ -16,7 +15,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="destinations.html">Destinations</a></li>
         <li><a href="itinerary.html">Plan a Trip</a></li>
-        <li><a href="login.html" class="btn-nav">Log in</a></li>
+        <li><a href="login.html" class="btn-nav active-nav">Log in</a></li>
       </ul>
     </nav>
   </header>
@@ -24,15 +23,11 @@
   <section class="auth-wrap">
     <div class="auth-card">
       <div class="auth-tabs">
-        <span class="tab active" id="tabLogin">Log in</span>
-        <span class="tab" id="tabSignup">Sign up</span>
+        <span class="tab active">Log in</span>
+        <span class="tab">Sign up</span>
       </div>
 
-      <form class="auth-form" id="authForm">
-        <div class="field" id="nameField" style="display:none;">
-          <label for="fullname">Full name</label>
-          <input type="text" id="fullname" placeholder="Your name">
-        </div>
+      <form class="auth-form">
         <div class="field">
           <label for="email">Email</label>
           <input type="email" id="email" placeholder="you@example.com">
@@ -42,16 +37,14 @@
           <input type="password" id="password" placeholder="••••••••">
         </div>
         <label class="remember">
-          <input type="checkbox" id="remember" checked> Keep me signed in on this device
+          <input type="checkbox"> Keep me signed in on this device
         </label>
-        <p class="msg" id="authMsg"></p>
-        <button type="submit" class="btn-primary full" id="submitBtn">Log in</button>
+        <button type="submit" class="btn-primary full">Log in</button>
       </form>
 
       <p class="auth-note">
         Demo login for coursework — checked against a bundled sample
-        account list, not a live authentication service.<br>
-        Try: demo@waypoint.com / demo123
+        account list, not a live authentication service.
       </p>
     </div>
   </section>
@@ -60,7 +53,6 @@
     <p>Waypoint — a student project, GLA University.</p>
     <p>Om Singh · Nishant Prajapati · Palak Kamra · Naveen Yadav</p>
   </footer>
-  <script src="js/common.js"></script>
-  <script src="js/login.js"></script>
+
 </body>
 </html>
