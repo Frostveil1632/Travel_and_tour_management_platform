@@ -1,0 +1,9 @@
+[
+  {"id":"p1","destId":"jaipur","name":"Royal Rajasthan","days":4,"pricePerPerson":14500,"includes":["Hotel","Breakfast","Local cab"]},
+  {"id":"p2","destId":"manali","name":"Himalayan Escape","days":3,"pricePerPerson":11200,"includes":["Hotel","Breakfast","Sightseeing cab"]},
+  {"id":"p3","destId":"goa","name":"Goa Getaway","days":3,"pricePerPerson":9800,"includes":["Beach resort","Breakfast","Scooter rental"]},
+  {"id":"p4","destId":"udaipur","name":"City of Lakes","days":3,"pricePerPerson":13000,"includes":["Heritage hotel","Breakfast","Boat ride"]},
+  {"id":"p5","destId":"rishikesh","name":"Ganga Adventure","days":2,"pricePerPerson":7500,"includes":["Riverside camp","Meals","Guide"]},
+  {"id":"p6","destId":"munnar","name":"Tea Hills Retreat","days":4,"pricePerPerson":15600,"includes":["Resort","Breakfast","Local cab"]},
+  {"id":"p7","destId":"shillong","name":"Abode of Clouds","days":3,"pricePerPerson":10800,"includes":["Hotel","Breakfast","Local cab"]}
+]
