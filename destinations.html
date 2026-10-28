@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Destinations — Waypoint</title>
+<link rel="stylesheet" href="destinations.css">
+<link rel="stylesheet" href="extra.css">
+</head>
+<body>
+
+  <header class="nav">
+    <a href="index.html" class="brand">Waypoint</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html" class="active">Destinations</a></li>
+        <li><a href="itinerary.html">Plan a Trip</a></li>
+        <li><a href="login.html" class="btn-nav">Log in</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-head">
+    <h1>Browse destinations</h1>
+    <p>Sourced from our destination and package dataset — filter by region, budget and trip length.</p>
+  </section>
+
+  <section class="layout">
+    <aside class="filters">
+      <div class="filter-group">
+        <h4>Region</h4>
+        <label><input type="checkbox" name="region" value="north" checked> North India</label>
+        <label><input type="checkbox" name="region" value="south" checked> South India</label>
+        <label><input type="checkbox" name="region" value="west" checked> West &amp; Coastal</label>
+        <label><input type="checkbox" name="region" value="northeast" checked> North-East</label>
+      </div>
+      <div class="filter-group">
+        <h4>Trip length</h4>
+        <label><input type="radio" name="len" value="any" checked> Any</label>
+        <label><input type="radio" name="len" value="short"> 2–3 days</label>
+        <label><input type="radio" name="len" value="mid"> 4–6 days</label>
+        <label><input type="radio" name="len" value="long"> 7+ days</label>
+      </div>
+      <div class="filter-group">
+        <h4>Budget per person</h4>
+        <input type="range" id="budgetRange" min="5000" max="50000" step="500" value="50000">
+        <p class="range-value" id="budgetText">Up to ₹50,000</p>
+      </div>
+      <button class="btn-primary full" id="applyBtn">Apply filters</button>
+    </aside>
+
+    <div class="results">
+      <p class="results-count" id="resultsCount">Loading...</p>
+      <div class="dest-grid" id="destGrid"></div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>Waypoint — a student project, GLA University.</p>
+    <p>Om Singh · Nishant Prajapati · Palak Kamra · Naveen Yadav</p>
+  </footer>
+  <script src="js/common.js"></script>
+  <script src="js/destinations.js"></script>
+</body>
+</html>
