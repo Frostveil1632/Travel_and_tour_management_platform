@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Destinations — Waypoint</title>
+<link rel="stylesheet" href="destinations.css">
+</head>
+<body>
+
+  <header class="nav">
+    <a href="index.html" class="brand">Waypoint</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html" class="active">Destinations</a></li>
+        <li><a href="itinerary.html">Plan a Trip</a></li>
+        <li><a href="login.html" class="btn-nav">Log in</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-head">
+    <h1>Browse destinations</h1>
+    <p>Sourced from our destination and package dataset — filter by region, budget and trip length.</p>
+  </section>
+
+  <section class="layout">
+    <aside class="filters">
+      <div class="filter-group">
+        <h4>Region</h4>
+        <label><input type="checkbox" checked> North India</label>
+        <label><input type="checkbox"> South India</label>
+        <label><input type="checkbox"> West &amp; Coastal</label>
+        <label><input type="checkbox"> North-East</label>
+      </div>
+      <div class="filter-group">
+        <h4>Trip length</h4>
+        <label><input type="radio" name="len"> 2–3 days</label>
+        <label><input type="radio" name="len" checked> 4–6 days</label>
+        <label><input type="radio" name="len"> 7+ days</label>
+      </div>
+      <div class="filter-group">
+        <h4>Budget per person</h4>
+        <input type="range" min="5000" max="50000" value="20000">
+        <p class="range-value">Up to ₹20,000</p>
+      </div>
+      <button class="btn-primary full">Apply filters</button>
+    </aside>
+
+    <div class="results">
+      <p class="results-count">14 destinations match</p>
+      <div class="dest-grid">
+
+        <article class="dest-card">
+          <div class="dest-art art-1"></div>
+          <div class="dest-body">
+            <h3>Jaipur, Rajasthan</h3>
+            <p class="dest-meta">Heritage &amp; forts · 4–6 days</p>
+            <p class="dest-price">From ₹14,500 <span>/ person</span></p>
+            <a href="itinerary.html" class="btn-secondary small">Plan this trip</a>
+          </div>
+        </article>
+
+        <article class="dest-card">
+          <div class="dest-art art-2"></div>
+          <div class="dest-body">
+            <h3>Manali, Himachal Pradesh</h3>
+            <p class="dest-meta">Mountains &amp; treks · 3–5 days</p>
+            <p class="dest-price">From ₹11,200 <span>/ person</span></p>
+            <a href="itinerary.html" class="btn-secondary small">Plan this trip</a>
+          </div>
+        </article>
+
+        <article class="dest-card">
+          <div class="dest-art art-3"></div>
+          <div class="dest-body">
+            <h3>Goa</h3>
+            <p class="dest-meta">Coast &amp; nightlife · 3–4 days</p>
+            <p class="dest-price">From ₹9,800 <span>/ person</span></p>
+            <a href="itinerary.html" class="btn-secondary small">Plan this trip</a>
+          </div>
+        </article>
+
+        <article class="dest-card">
+          <div class="dest-art art-4"></div>
+          <div class="dest-body">
+            <h3>Udaipur, Rajasthan</h3>
+            <p class="dest-meta">Lakes &amp; palaces · 3–4 days</p>
+            <p class="dest-price">From ₹13,000 <span>/ person</span></p>
+            <a href="itinerary.html" class="btn-secondary small">Plan this trip</a>
+          </div>
+        </article>
+
+        <article class="dest-card">
+          <div class="dest-art art-5"></div>
+          <div class="dest-body">
+            <h3>Rishikesh, Uttarakhand</h3>
+            <p class="dest-meta">Rivers &amp; adventure · 2–4 days</p>
+            <p class="dest-price">From ₹7,500 <span>/ person</span></p>
+            <a href="itinerary.html" class="btn-secondary small">Plan this trip</a>
+          </div>
+        </article>
+
+        <article class="dest-card">
+          <div class="dest-art art-6"></div>
+          <div class="dest-body">
+            <h3>Munnar, Kerala</h3>
+            <p class="dest-meta">Tea hills &amp; backwaters · 4–5 days</p>
+            <p class="dest-price">From ₹15,600 <span>/ person</span></p>
+            <a href="itinerary.html" class="btn-secondary small">Plan this trip</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>Waypoint — a student project, GLA University.</p>
+    <p>Om Singh · Nishant Prajapati · Palak Kamra · Naveen Yadav</p>
+  </footer>
+
+</body>
+</html>
