@@ -1,0 +1,39 @@
+/* extra.css - small additions for the new pages (loaded after the page's own css) */
+.msg{margin:12px 0;font-size:0.88rem;color:#a33;}
+.msg.ok{color:#2d6a4f;}
+.error-box{background:#fff3f3;border:1px solid #e0b4b4;padding:14px;border-radius:4px;color:#7a2222;font-size:0.9rem;}
+.tab{cursor:pointer;}
+a.btn-primary{display:inline-block;text-align:center;}
+.btn-outline{display:inline-block;border:1px solid var(--navy);padding:5px 12px;border-radius:4px;font-size:0.85rem;}
+.btn-link{background:none;border:none;color:#a33;cursor:pointer;font-size:0.85rem;}
+
+/* destinations */
+.card-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
+.wish-btn{background:none;border:1px solid #d8d2c2;border-radius:4px;padding:7px 12px;cursor:pointer;font-size:0.85rem;color:var(--muted);}
+.wish-btn.saved{color:#b03a48;border-color:#b03a48;}
+
+/* itinerary result (also used on My Trips) */
+.day-card{background:var(--white);border-radius:8px;padding:20px 22px;margin-bottom:16px;}
+.day-card h3{font-family:var(--serif);font-size:1.05rem;margin-bottom:12px;}
+.stops li{display:grid;grid-template-columns:60px 1fr 80px;gap:10px;padding:9px 0;border-bottom:1px solid #eee;font-size:0.92rem;}
+.stops li:last-child{border-bottom:none;}
+.time{color:var(--muted);}
+.cost{text-align:right;color:var(--muted);}
+.route-note{font-size:0.85rem;color:var(--muted);margin:14px 0;}
+.breakdown li{display:flex;justify-content:space-between;padding:6px 0;font-size:0.9rem;}
+.result-actions{display:flex;gap:14px;}
+
+/* booking + profile + benchmark */
+.empty-box{background:var(--white);border-radius:8px;padding:30px;grid-column:1 / -1;text-align:center;}
+.empty-box p{margin-bottom:12px;}
+.empty-box h3{font-family:var(--serif);margin-bottom:12px;}
+.profile-wrap{max-width:900px;margin:0 auto;padding:0 48px 64px;}
+.section-box{background:var(--white);border-radius:8px;padding:22px;margin-bottom:24px;}
+.section-box h2{font-family:var(--serif);font-size:1.2rem;margin-bottom:12px;}
+.list-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #eee;font-size:0.92rem;}
+.saved-item{border-bottom:1px solid #eee;padding:10px 0;}
+.saved-item summary{cursor:pointer;font-weight:500;margin-bottom:10px;}
+table.bench{width:100%;border-collapse:collapse;font-size:0.88rem;background:var(--white);}
+table.bench th,table.bench td{padding:10px;border-bottom:1px solid #eee;text-align:right;}
+table.bench th:first-child,table.bench td:first-child{text-align:left;}
+@media (max-width:800px){.profile-wrap{padding:0 20px 40px;}}
