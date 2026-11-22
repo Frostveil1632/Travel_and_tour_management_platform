@@ -29,7 +29,7 @@ function applyFilters() {
   const wishlist = getUserList('wishlist');
   const matches = destinations.filter(d => {
     const pkg = getPackage(d.id);
-    return regions.includes(d.region) && lengthMatches(d, length) && pkg.pricePerPerson <= maxBudget;
+    return pkg && regions.includes(d.region) && lengthMatches(d, length) && pkg.pricePerPerson <= maxBudget;
   });
 
   countText.textContent = matches.length + ' destinations match';
