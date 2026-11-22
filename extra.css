@@ -37,3 +37,8 @@ table.bench{width:100%;border-collapse:collapse;font-size:0.88rem;background:var
 table.bench th,table.bench td{padding:10px;border-bottom:1px solid #eee;text-align:right;}
 table.bench th:first-child,table.bench td:first-child{text-align:left;}
 @media (max-width:800px){.profile-wrap{padding:0 20px 40px;}}
+
+/* data editor */
+.editor-form{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin-bottom:16px;}
+.editor-bar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:14px;}
+table.bench.left th,table.bench.left td{text-align:left;}
