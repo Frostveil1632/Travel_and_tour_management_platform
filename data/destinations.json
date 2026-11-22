@@ -1,0 +1,9 @@
+[
+  {"id":"jaipur","title":"Jaipur, Rajasthan","region":"north","theme":"Heritage & forts","minDays":4,"maxDays":6},
+  {"id":"manali","title":"Manali, Himachal Pradesh","region":"north","theme":"Mountains & treks","minDays":3,"maxDays":5},
+  {"id":"goa","title":"Goa","region":"west","theme":"Coast & nightlife","minDays":3,"maxDays":4},
+  {"id":"udaipur","title":"Udaipur, Rajasthan","region":"north","theme":"Lakes & palaces","minDays":3,"maxDays":4},
+  {"id":"rishikesh","title":"Rishikesh, Uttarakhand","region":"north","theme":"Rivers & adventure","minDays":2,"maxDays":4},
+  {"id":"munnar","title":"Munnar, Kerala","region":"south","theme":"Tea hills & backwaters","minDays":4,"maxDays":5},
+  {"id":"shillong","title":"Shillong, Meghalaya","region":"northeast","theme":"Waterfalls & lakes","minDays":3,"maxDays":5}
+]

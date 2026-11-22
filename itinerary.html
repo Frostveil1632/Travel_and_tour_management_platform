@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plan a trip — Waypoint</title>
+<link rel="stylesheet" href="itinerary.css">
+</head>
+<body>
+
+  <header class="nav">
+    <a href="index.html" class="brand">Waypoint</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="itinerary.html" class="active">Plan a Trip</a></li>
+        <li><a href="login.html" class="btn-nav">Log in</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-head">
+    <h1>Build your itinerary</h1>
+    <p>Tell us the destination, dates and budget — the plan below is sequenced to cut travel time and stay inside what you set.</p>
+  </section>
+
+  <section class="builder">
+    <form class="builder-form">
+      <div class="field">
+        <label for="dest">Destination</label>
+        <select id="dest">
+          <option>Jaipur, Rajasthan</option>
+          <option>Manali, Himachal Pradesh</option>
+          <option>Goa</option>
+        </select>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="start">Start date</label>
+          <input type="date" id="start" value="2026-11-14">
+        </div>
+        <div class="field">
+          <label for="days">Number of days</label>
+          <input type="number" id="days" value="3" min="1" max="14">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="travelers">Travelers</label>
+          <input type="number" id="travelers" value="2" min="1">
+        </div>
+        <div class="field">
+          <label for="budget">Total budget (₹)</label>
+          <input type="number" id="budget" value="25000" step="500">
+        </div>
+      </div>
+      <button type="submit" class="btn-primary full">Generate itinerary</button>
+    </form>
+
+    <div class="result">
+      <div class="result-head">
+        <h2>3-day plan for Jaipur</h2>
+        <p>₹22,400 of ₹25,000 budget used · 2 travelers</p>
+      </div>
+
+      <div class="day-card">
+        <h3>Day 1</h3>
+        <ol class="stops">
+          <li><span class="time">09:00</span><span class="stop">Amber Fort</span><span class="cost">₹500</span></li>
+          <li><span class="time">12:00</span><span class="stop">Jal Mahal (viewpoint)</span><span class="cost">₹0</span></li>
+          <li><span class="time">15:00</span><span class="stop">City Palace</span><span class="cost">₹700</span></li>
+        </ol>
+      </div>
+
+      <div class="day-card">
+        <h3>Day 2</h3>
+        <ol class="stops">
+          <li><span class="time">09:00</span><span class="stop">Hawa Mahal</span><span class="cost">₹200</span></li>
+          <li><span class="time">11:00</span><span class="stop">Jantar Mantar</span><span class="cost">₹200</span></li>
+          <li><span class="time">14:00</span><span class="stop">Nahargarh Fort</span><span class="cost">₹200</span></li>
+        </ol>
+      </div>
+
+      <div class="day-card">
+        <h3>Day 3</h3>
+        <ol class="stops">
+          <li><span class="time">10:00</span><span class="stop">Albert Hall Museum</span><span class="cost">₹150</span></li>
+          <li><span class="time">13:00</span><span class="stop">Local bazaar &amp; lunch</span><span class="cost">₹1,200</span></li>
+        </ol>
+      </div>
+
+      <p class="route-note">Route reordered by nearest-stop sequencing — about 40 minutes less travel than the order stops were added in.</p>
+      <div class="result-actions">
+        <button class="btn-secondary">Save itinerary</button>
+        <button class="btn-primary">Continue to booking</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>Waypoint — a student project, GLA University.</p>
+    <p>Om Singh · Nishant Prajapati · Palak Kamra · Naveen Yadav</p>
+  </footer>
+
+</body>
+</html>
