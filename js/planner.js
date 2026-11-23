@@ -173,7 +173,7 @@ function buildPlan(dest, pkg, attractions, startDate, days, travelers, budget) {
   const savedKm = naiveKm - totalKm;
 
   return {
-    destId: dest.id, destTitle: dest.title, destImage: dest.image || '', packageName: pkg.name,
+    destId: dest.id, destTitle: dest.title, packageName: pkg.name,
     startDate: startDate, days: days, travelers: travelers, budget: budget,
     fare: fare, entry: entry, transport: transport, total: fare + entry + transport,
     daysPlan: daysPlan, skipped: skipped,

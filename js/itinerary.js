@@ -9,8 +9,7 @@ const select = document.getElementById('dest');
 const result = document.getElementById('result');
 
 function showPlan(plan) {
-  let html = (plan.destImage ? '<div class="result-banner"' + bgImage(plan.destImage) + '></div>' : '') +
-    '<div class="result-head"><h2>' + plan.days + '-day plan for ' + esc(plan.destTitle) + '</h2>' +
+  let html = '<div class="result-head"><h2>' + plan.days + '-day plan for ' + esc(plan.destTitle) + '</h2>' +
     '<p>' + money(plan.total) + ' of ' + money(plan.budget) + ' budget used \u00B7 ' +
     plan.travelers + ' travelers \u00B7 ' + dateRange(plan.startDate, plan.days) + '</p></div>';
   html += renderDays(plan);

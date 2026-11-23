@@ -12,8 +12,7 @@ function drawWishlist() {
   box.innerHTML = ids.map(id => {
     const d = destinations.find(x => x.id === id);
     const title = d ? d.title : id;
-    return '<div class="list-row"><span class="with-thumb"><span class="thumb"' + bgImage(d && d.image) +
-      '></span>' + esc(title) + '</span><span>' +
+    return '<div class="list-row"><span>' + esc(title) + '</span><span>' +
       '<a href="itinerary.html?dest=' + id + '" class="btn-outline">Plan trip</a> ' +
       '<button class="btn-link" data-remove-wish="' + id + '">Remove</button></span></div>';
   }).join('');
@@ -42,10 +41,9 @@ function drawBookings() {
     return;
   }
   box.innerHTML = list.map(b => {
-    return '<div class="list-row"><span class="with-thumb"><span class="thumb"' + bgImage(b.plan.destImage) +
-      '></span><span><b>' + b.id + '</b> \u00B7 ' + esc(b.plan.destTitle) + '<br>' +
+    return '<div class="list-row"><span><b>' + b.id + '</b> \u00B7 ' + esc(b.plan.destTitle) + '<br>' +
       '<small>' + dateRange(b.plan.startDate, b.plan.days) + ' \u00B7 ' + b.plan.travelers +
-      ' travelers \u00B7 ' + esc(b.traveler.name) + '</small></span></span>' +
+      ' travelers \u00B7 ' + esc(b.traveler.name) + '</small></span>' +
       '<span>' + money(b.plan.total) + '<br><small>' + b.status + '</small></span></div>';
   }).join('');
 }
