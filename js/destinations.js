@@ -29,7 +29,7 @@ function applyFilters() {
   const wishlist = getUserList('wishlist');
   const matches = destinations.filter(d => {
     const pkg = getPackage(d.id);
-    return regions.includes(d.region) && lengthMatches(d, length) && pkg.pricePerPerson <= maxBudget;
+    return pkg && regions.includes(d.region) && lengthMatches(d, length) && pkg.pricePerPerson <= maxBudget;
   });
 
   countText.textContent = matches.length + ' destinations match';
@@ -42,7 +42,7 @@ function applyFilters() {
     const pkg = getPackage(d.id);
     const saved = wishlist.includes(d.id);
     return '<article class="dest-card">' +
-      '<div class="dest-art art-' + ((destinations.indexOf(d) % 6) + 1) + '"></div>' +
+      '<div class="dest-art art-' + ((destinations.indexOf(d) % 6) + 1) + '"' + bgImage(d.image) + '></div>' +
       '<div class="dest-body">' +
         '<h3>' + d.title + '</h3>' +
         '<p class="dest-meta">' + d.theme + ' \u00B7 ' + d.minDays + '\u2013' + d.maxDays + ' days</p>' +
