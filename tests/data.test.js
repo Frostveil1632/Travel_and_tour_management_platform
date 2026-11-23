@@ -23,6 +23,11 @@ describe('bundled JSON data', () => {
       });
     });
   });
+  test('every destination image file exists', () => {
+    data.destinations.forEach(d => {
+      if (d.image) expect(fs.existsSync(d.image)).toBe(true);
+    });
+  });
   test('users have name, email and password', () => {
     read('users').forEach(u => {
       expect(u.name && u.email && u.password).toBeTruthy();

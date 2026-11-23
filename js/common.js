@@ -3,11 +3,18 @@
 const KEYS = {
   session: 'waypoint_session',
   extraUsers: 'waypoint_extra_users',
-  pending: 'waypoint_pending_plan'
+  pending: 'waypoint_pending_plan',
+  dataPrefix: 'waypoint_data_'   // data edited in the Data Editor
 };
 
 // load a JSON file from the data folder
 function loadJSON(path) {
+  // data saved by the Data Editor (localStorage) wins over the bundled file
+  const match = path.match(/^data\/(destinations|packages|attractions)\.json$/);
+  if (match) {
+    const edited = localStorage.getItem(KEYS.dataPrefix + match[1]);
+    if (edited) return Promise.resolve(JSON.parse(edited));
+  }
   return fetch(path).then(res => {
     if (!res.ok) throw new Error('Could not load ' + path);
     return res.json();
@@ -26,6 +33,12 @@ function esc(text) {
   const div = document.createElement('div');
   div.textContent = text;
   return div.innerHTML;
+}
+
+// style attribute that shows an image as a background (empty if there is no image)
+function bgImage(path) {
+  if (!path) return '';
+  return ' style="background-image:url(' + encodeURI(path) + ');background-size:cover;background-position:center"';
 }
 
 function money(n) {
@@ -101,3 +114,8 @@ function setupNav() {
 }
 
 setupNav();
+
+// lets us test the file with jest
+if (typeof module !== 'undefined') {
+  module.exports = { KEYS, loadJSON, showDataError, esc, bgImage, money, getSession, getUserList, setUserList, dateRange, renderDays };
+}
