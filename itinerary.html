@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Plan a trip — Waypoint</title>
 <link rel="stylesheet" href="itinerary.css">
+<link rel="stylesheet" href="extra.css">
 </head>
 <body>
 
@@ -15,6 +16,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="destinations.html">Destinations</a></li>
         <li><a href="itinerary.html" class="active">Plan a Trip</a></li>
+        <li><a href="editor.html">Data Editor</a></li>
         <li><a href="login.html" class="btn-nav">Log in</a></li>
       </ul>
     </nav>
@@ -22,18 +24,14 @@
 
   <section class="page-head">
     <h1>Build your itinerary</h1>
-    <p>Tell us the destination, dates and budget — the plan below is sequenced to cut travel time and stay inside what you set.</p>
+    <p>Tell us the destination, dates and budget — the plan is sequenced to cut travel time and stay inside what you set.</p>
   </section>
 
   <section class="builder">
-    <form class="builder-form">
+    <form class="builder-form" id="plannerForm">
       <div class="field">
         <label for="dest">Destination</label>
-        <select id="dest">
-          <option>Jaipur, Rajasthan</option>
-          <option>Manali, Himachal Pradesh</option>
-          <option>Goa</option>
-        </select>
+        <select id="dest"></select>
       </div>
       <div class="field-row">
         <div class="field">
@@ -52,49 +50,15 @@
         </div>
         <div class="field">
           <label for="budget">Total budget (₹)</label>
-          <input type="number" id="budget" value="25000" step="500">
+          <input type="number" id="budget" value="30000" step="500">
         </div>
       </div>
       <button type="submit" class="btn-primary full">Generate itinerary</button>
     </form>
 
-    <div class="result">
-      <div class="result-head">
-        <h2>3-day plan for Jaipur</h2>
-        <p>₹22,400 of ₹25,000 budget used · 2 travelers</p>
-      </div>
-
-      <div class="day-card">
-        <h3>Day 1</h3>
-        <ol class="stops">
-          <li><span class="time">09:00</span><span class="stop">Amber Fort</span><span class="cost">₹500</span></li>
-          <li><span class="time">12:00</span><span class="stop">Jal Mahal (viewpoint)</span><span class="cost">₹0</span></li>
-          <li><span class="time">15:00</span><span class="stop">City Palace</span><span class="cost">₹700</span></li>
-        </ol>
-      </div>
-
-      <div class="day-card">
-        <h3>Day 2</h3>
-        <ol class="stops">
-          <li><span class="time">09:00</span><span class="stop">Hawa Mahal</span><span class="cost">₹200</span></li>
-          <li><span class="time">11:00</span><span class="stop">Jantar Mantar</span><span class="cost">₹200</span></li>
-          <li><span class="time">14:00</span><span class="stop">Nahargarh Fort</span><span class="cost">₹200</span></li>
-        </ol>
-      </div>
-
-      <div class="day-card">
-        <h3>Day 3</h3>
-        <ol class="stops">
-          <li><span class="time">10:00</span><span class="stop">Albert Hall Museum</span><span class="cost">₹150</span></li>
-          <li><span class="time">13:00</span><span class="stop">Local bazaar &amp; lunch</span><span class="cost">₹1,200</span></li>
-        </ol>
-      </div>
-
-      <p class="route-note">Route reordered by nearest-stop sequencing — about 40 minutes less travel than the order stops were added in.</p>
-      <div class="result-actions">
-        <button class="btn-secondary">Save itinerary</button>
-        <button class="btn-primary">Continue to booking</button>
-      </div>
+    <div class="result" id="result">
+      <p class="route-note">Fill in the form and click "Generate itinerary". The budget covers the package fare, entry tickets and local transport.
+      <a href="benchmark.html"><u>See algorithm benchmark</u></a></p>
     </div>
   </section>
 
@@ -102,6 +66,8 @@
     <p>Waypoint — a student project, GLA University.</p>
     <p>Om Singh · Nishant Prajapati · Palak Kamra · Naveen Yadav</p>
   </footer>
-
+  <script src="js/common.js"></script>
+  <script src="js/planner.js"></script>
+  <script src="js/itinerary.js"></script>
 </body>
 </html>

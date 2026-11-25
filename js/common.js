@@ -35,6 +35,12 @@ function esc(text) {
   return div.innerHTML;
 }
 
+// style attribute that shows an image as a background (empty if there is no image)
+function bgImage(path) {
+  if (!path) return '';
+  return ' style="background-image:url(' + encodeURI(path) + ');background-size:cover;background-position:center"';
+}
+
 function money(n) {
   return '\u20B9' + Number(n).toLocaleString('en-IN');
 }
@@ -111,5 +117,6 @@ setupNav();
 
 // lets us test the file with jest
 if (typeof module !== 'undefined') {
+  module.exports = { KEYS, loadJSON, showDataError, esc, bgImage, money, getSession, getUserList, setUserList, dateRange, renderDays };
   module.exports = { KEYS, loadJSON, esc, money, getSession, getUserList, setUserList, dateRange, renderDays };
 }

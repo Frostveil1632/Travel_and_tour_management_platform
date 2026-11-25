@@ -42,3 +42,9 @@ table.bench th:first-child,table.bench td:first-child{text-align:left;}
 .editor-form{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin-bottom:16px;}
 .editor-bar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:14px;}
 table.bench.left th,table.bench.left td{text-align:left;}
+
+/* destination images */
+.result-banner{height:150px;border-radius:8px;background:#d8d2c2;margin-bottom:18px;}
+.summary-img{height:110px;margin:-24px -24px 16px;border-radius:8px 8px 0 0;background:#48577c;}
+.with-thumb{display:flex;align-items:center;gap:12px;}
+.thumb{width:56px;height:40px;border-radius:4px;background:#d8d2c2;flex-shrink:0;display:inline-block;}

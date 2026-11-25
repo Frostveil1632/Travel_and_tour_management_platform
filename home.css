@@ -51,6 +51,7 @@ ul{list-style:none;}
 .btn-primary{background:var(--sand);color:var(--navy);padding:13px 26px;border-radius:var(--radius);font-weight:600;}
 .btn-secondary{border:1px solid #48577c;padding:13px 26px;border-radius:var(--radius);}
 
+.hero-panel{background:url(images/jaipur.svg) center/cover;border-radius:10px;padding:48px 28px;}
 .route-card{
   background:var(--white);color:var(--ink);border-radius:8px;padding:28px;
   max-width:340px;margin-left:auto;
@@ -78,14 +79,13 @@ ul{list-style:none;}
 .preview-head h2{font-family:var(--serif);font-size:1.6rem;}
 .preview-head a{color:var(--navy);font-weight:600;font-size:0.9rem;}
 .preview-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
   max-width:1200px;margin:0 auto;
 }
 .dest-card{background:var(--white);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(21,34,56,0.08);}
-.dest-art{height:150px;}
-.dest-1 .dest-art{background:linear-gradient(135deg,#c9a66b,#8a6a3b);}
-.dest-2 .dest-art{background:linear-gradient(135deg,#26406b,#152238);}
-.dest-3 .dest-art{background:linear-gradient(135deg,#6b8f9a,#294a54);}
+.dest-card{display:block;color:inherit;transition:transform .15s;}
+.dest-card:hover{transform:translateY(-3px);}
+.dest-art{height:150px;background:#d8d2c2;background-size:cover;background-position:center;}
 .dest-card h4{padding:16px 16px 4px;font-family:var(--serif);}
 .dest-card p{padding:0 16px 16px;color:var(--muted);font-size:0.88rem;}
 
@@ -95,6 +95,9 @@ ul{list-style:none;}
 }
 .site-footer p:first-child{margin-bottom:4px;color:var(--ink);}
 
+@media (max-width:1000px){
+  .preview-grid{grid-template-columns:repeat(2,1fr);}
+}
 @media (max-width:800px){
   .hero{grid-template-columns:1fr;}
   .features,.preview-grid{grid-template-columns:1fr;}

@@ -10,6 +10,7 @@ if (!user) {
     '<a href="itinerary.html" class="btn-primary">Build an itinerary first</a></div>';
 } else {
   document.getElementById('summary').innerHTML =
+    (plan.destImage ? '<div class="summary-img"' + bgImage(plan.destImage) + '></div>' : '') +
     '<h3>Trip summary</h3><p class="summary-dest">' + esc(plan.destTitle) + '</p>' +
     '<p class="summary-meta">' + plan.days + ' days \u00B7 ' + plan.travelers + ' travelers \u00B7 ' +
     dateRange(plan.startDate, plan.days) + '</p>' +

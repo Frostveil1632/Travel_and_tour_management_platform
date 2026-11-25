@@ -64,3 +64,13 @@ describe('renderDays', () => {
     expect(document.body.textContent).toContain('Free day');
   });
 });
+
+describe('bgImage', () => {
+  test('gives a style attribute with the image', () => {
+    expect(common.bgImage('images/goa.svg')).toContain('url(images/goa.svg)');
+  });
+  test('gives nothing when there is no image', () => {
+    expect(common.bgImage('')).toBe('');
+    expect(common.bgImage(undefined)).toBe('');
+  });
+});
