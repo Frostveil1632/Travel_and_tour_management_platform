@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Editor — Waypoint</title>
+<link rel="stylesheet" href="auth-booking.css">
+<link rel="stylesheet" href="extra.css">
+</head>
+<body>
+
+  <header class="nav">
+    <a href="index.html" class="brand">Waypoint</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="itinerary.html">Plan a Trip</a></li>
+        <li><a href="editor.html">Data Editor</a></li>
+        <li><a href="login.html" class="btn-nav">Log in</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-head">
+    <h1>Data Editor</h1>
+    <p>Add, edit or delete destinations, packages and attractions. Changes are saved in this browser and used by every page. Download the JSON to share it.</p>
+  </section>
+
+  <section class="profile-wrap">
+    <div class="section-box">
+      <div class="editor-bar">
+        <label for="kind"><b>Dataset:</b></label>
+        <select id="kind">
+          <option value="destinations">Destinations</option>
+          <option value="packages">Packages</option>
+          <option value="attractions">Attractions</option>
+        </select>
+        <button class="btn-outline" id="downloadBtn">Download JSON</button>
+        <button class="btn-link" id="resetBtn">Reset to original file</button>
+      </div>
+      <p class="msg" id="editorMsg"></p>
+      <div id="tableBox"><p class="route-note">Loading...</p></div>
+    </div>
+    <div class="section-box" id="formBox"></div>
+  </section>
+
+  <footer class="site-footer">
+    <p>Waypoint — a student project, GLA University.</p>
+    <p>Om Singh · Nishant Prajapati · Palak Kamra · Naveen Yadav</p>
+  </footer>
+  <script src="js/common.js"></script>
+  <script src="js/validate.js"></script>
+  <script src="js/editor.js"></script>
+</body>
+</html>

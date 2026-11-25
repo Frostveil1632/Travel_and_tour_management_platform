@@ -9,8 +9,7 @@ const SCHEMAS = {
     { key: 'region', label: 'Region', type: 'select', options: REGIONS },
     { key: 'theme', label: 'Theme', type: 'text' },
     { key: 'minDays', label: 'Min days', type: 'number' },
-    { key: 'maxDays', label: 'Max days', type: 'number' },
-    { key: 'image', label: 'Image path (optional)', type: 'text', optional: true }
+    { key: 'maxDays', label: 'Max days', type: 'number' }
   ],
   packages: [
     { key: 'id', label: 'ID', type: 'text' },
@@ -48,7 +47,7 @@ function validateRecord(kind, rec, data, editingId) {
       if (!isNumber(v)) errors.push(f.label + ' must be a number.');
     } else if (f.type === 'list') {
       if (!Array.isArray(v) || v.length === 0) errors.push(f.label + ' needs at least one item.');
-    } else if (!f.optional && (v === undefined || v === null || String(v).trim() === '')) {
+    } else if (v === undefined || v === null || String(v).trim() === '') {
       errors.push(f.label + ' is required.');
     }
   });
