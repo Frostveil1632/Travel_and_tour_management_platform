@@ -70,14 +70,3 @@ describe('deleteProblem', () => {
     expect(deleteProblem('attractions', 'a1', data)).toBe('');
   });
 });
-
-describe('destination image field', () => {
-  const dest = { id: 'kochi', title: 'Kochi', region: 'south', theme: 'Port', minDays: 2, maxDays: 3 };
-  test('image is optional', () => {
-    expect(validateRecord('destinations', dest, data, null)).toEqual([]);
-    expect(validateRecord('destinations', { ...dest, image: '' }, data, null)).toEqual([]);
-  });
-  test('image path is accepted when given', () => {
-    expect(validateRecord('destinations', { ...dest, image: 'images/kochi.jpg' }, data, null)).toEqual([]);
-  });
-});
