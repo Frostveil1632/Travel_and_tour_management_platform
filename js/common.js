@@ -118,4 +118,5 @@ setupNav();
 // lets us test the file with jest
 if (typeof module !== 'undefined') {
   module.exports = { KEYS, loadJSON, showDataError, esc, bgImage, money, getSession, getUserList, setUserList, dateRange, renderDays };
+  module.exports = { KEYS, loadJSON, esc, money, getSession, getUserList, setUserList, dateRange, renderDays };
 }
